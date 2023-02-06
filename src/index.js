@@ -2,7 +2,8 @@ const express = require("express");
 const {PORT}= require("./config/serverConfig");
 const bodyparser = require("body-parser");
 const connect = require("./config/databaseConfig");
-const TweetRepository = require("./repository/tweetRepository");
+
+
 
 const serverConnect = async()=>{
     const app = express();
@@ -11,7 +12,9 @@ const serverConnect = async()=>{
 
     app.listen(PORT, async()=>{
         console.log("connecting to database");
+        
         await connect();
+        console.log("entering");
         console.log("connected to database");
         console.log("Server Started...")
     })
