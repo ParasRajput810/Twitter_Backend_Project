@@ -15,7 +15,7 @@ const serverConnect = async()=>{
         console.log("connecting to database");
         
         await connect();
-      
+        
         console.log("connected to database");
         console.log("Server Started...");
     })
