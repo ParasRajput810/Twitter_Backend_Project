@@ -4,6 +4,7 @@ const bodyparser = require("body-parser");
 const connect = require("./config/databaseConfig");
 const Apiroutes = require("./routes/index");
 
+
 const serverConnect = async()=>{
     const app = express();
     app.use(bodyparser.json());
@@ -15,7 +16,6 @@ const serverConnect = async()=>{
         
         await connect();
       
-        
         console.log("connected to database");
         console.log("Server Started...");
     })
