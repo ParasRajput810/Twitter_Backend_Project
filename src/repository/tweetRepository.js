@@ -9,6 +9,15 @@ class tweetRepository {
             throw {error};
         }
     }
+
+    async findbyid(Id){
+        try {
+            const response = await Tweet.findById(Id);
+            return response;
+        } catch (error) {
+            throw {error};
+        }
+    }
 }
 
 
